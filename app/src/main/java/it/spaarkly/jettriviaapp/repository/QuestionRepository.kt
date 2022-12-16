@@ -17,7 +17,7 @@ class QuestionRepository @Inject constructor(private val api : QuestionApi) {
             if(!data.data.toString().isNullOrEmpty()) data.loading = false
         } catch (exc : Exception) {
             data.e = exc
-            Log.d("Exception", "getAllQuestions: ${exc.localizedMessage}")
+            Log.d("Exception Question", "getAllQuestions: ${exc.localizedMessage}")
         } finally {
           data.loading = false
         }
